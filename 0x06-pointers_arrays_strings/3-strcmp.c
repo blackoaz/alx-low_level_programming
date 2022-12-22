@@ -7,7 +7,7 @@
  * Return: if s1 is less than or greater than s2, or equal
  *
  */
-int _strcmp (char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	int i;
 

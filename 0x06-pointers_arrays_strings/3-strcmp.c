@@ -1,12 +1,13 @@
 #include "main.h"
 /**
  * _strcmp - compares two strings
- * s1 - arg char
- * s2 - arg char
+ * @s1 - arg char
+ * @s2 - arg char
  *
  * Return:string to stdout
  *
  */
+
 int _strcmp(char *s1, char *s2)
 {
 	int i;

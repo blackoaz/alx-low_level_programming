@@ -13,10 +13,11 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int numByte;
+	int i;
 
-	for (numByte = 0; numByte < n && src[numByte] != '\0'; numByte++)
-		dest[numByte] = '\0';
-
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
+	for (; i < n; i++)
+		dest[i] = '\0';
 	return (dest);
 }

@@ -1,26 +1,25 @@
 #include "main.h"
 /**
- * leet - replace letters with numbers
- * @str: pointer to an array of word
- *
- * Return: s
- */
+* leet - function that encode a string
+*@str:string that will be encoded
+*Return:returns encoded string
+*/
+
 char *leet(char *str)
 {
-	int i,j;
+	int index1 = 0, index2;
+	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	char alpha[80] = "aAeEoOtTIL";
-	char numbers[80] = "43071";
-
-	for (i = 0; str[i] != '\0'; ++i)
+	while (str[++index1])
 	{
-		for (j = 0; alpha[j] !='\0'; j++)
+		for (index2 = 0; index2 <= 7; index2++)
 		{
-			if (str[i] == alpha[j])
-			{
-				str[i] = numbers[j / 2];
-			}
+			if (str[index1] == leet[index2] ||
+			 str[index1] - 32 == leet[index2])
+				str[index1] = index2 + '0';
 		}
 	}
 	return (str);
 }
+Footer
+

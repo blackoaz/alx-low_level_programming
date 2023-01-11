@@ -17,8 +17,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	
-	mul = j(atoi(argv[1])) * i(atoi(argv[2]);
+	j = atoi(argv[1]);
+	i = atoi(argv[2]);
+
+	mul = j * i;
 
 	printf("%d", mul);
-	return (0)
+	return (0);
 }

@@ -7,6 +7,7 @@
 *@argv: array of arguments
 *Return: returns 0
 */
+
 int main(int argc, char *argv[])
 {
 	int i, j, mul;
@@ -16,12 +17,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	
-	j = atoi(argv[1]);
-	i = atoi(argv[2]);
 
-	mul = j * i;
+	i = atoi(argv[1]);
+	j = atoi(argv[2]);
+	mul = i * j;
 
-	printf("%d", mul);
+	printf("%d\n", mul);
 	return (0);
 }

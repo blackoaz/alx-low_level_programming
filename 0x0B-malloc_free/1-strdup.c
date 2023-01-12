@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strdup() - function that returns a pointer to anew string which is a 
- *  duplicate of the string
- *  @*str: string which is a duplicate
- *  Return: returns NULL
+ * _strdup - duplicates a string into newly allocted array
+ *
+ * @str: string to duplicate
+ *
+ * Return_ pointer to new string
  */
 char *_strdup(char *str)
 {

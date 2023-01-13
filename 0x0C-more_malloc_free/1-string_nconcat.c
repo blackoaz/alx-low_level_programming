@@ -6,16 +6,17 @@
  *
  * @s1:first character
  * @s2: second character
- * n: interger n
+ * @n: interger n
+ * Return: pointer to the concatenated string
  */
 char *string_nconcat(char *s1, *s2, unsigned int n)
 {
 	char *concat;
 	unsigned int len = n, i;
 
-	if (s1 = NULL)
+	if (s1 == NULL)
 		s1 = "";
-	if(s2 == NULL)
+	if (s2 == NULL)
 		s2 = "";
 	for (index = 0; s1[i]; i++)
 		len++;

@@ -2,28 +2,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-*int_index - searches for an integer
-*@array: Array containing elements
-*@size: number of elements in array
-*@cmp: function which compare values
-*
-*Return: returns -1 if no element match
-* or when size is less than zero
-*return pointer to the first corresponding element
-*
-*/
-
+ * int_index - return index place if comparison = true, else -1
+ * @array: array
+ * @size: size of elements in array
+ * @cmp: pointer to func of one of the 3 in main
+ * Return: 0
+ */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int index == 0;
+	int i;
 
-	if (array == NULL || cmp == NULL)
+	if (array == NULL)
 		return (-1);
-	for (, index < size; index++)
+	if (size <= 0)
+		return (-1);
+	if (cmp == NULL)
+		return (-1);
+
+	for (i = 0; i < size; i++)
 	{
-		if (cmp(index[]) != 0)
-			return (index);
+		if (cmp(array[i]) != 0)
+			return (i);
 	}
 	return (-1);
-
 }

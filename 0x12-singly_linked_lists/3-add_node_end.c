@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- **add_node - function that adds node at the end of the list
- *@str: string to be duplicated
- *@head: head of list
- *Return: returns the duplicated string
+ * add_node_end - a function that adds a new node
+ * at the end of a list_t list.
+ * @head: input
+ * @str: input
+ * Return: 0
  */
 list_t *add_node_end(list_t **head, const char *str)
 {

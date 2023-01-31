@@ -2,10 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
- * free - function for freeing list
+ * free_list - a function that frees a list_t list.
  * @head: struct
- * Return:0
+ * Return: free
  */
 void free_list(list_t *head)
 {

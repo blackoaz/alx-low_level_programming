@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * list_len - fumction that returns the number of elements
  * @h: struct

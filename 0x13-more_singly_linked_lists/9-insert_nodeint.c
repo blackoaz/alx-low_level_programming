@@ -2,7 +2,7 @@
 /**
  * insert_nodeint_at_index - inserts a new node ata given position
  * @head: pointer
- * @index: position for inserting node
+ * @idx: position for inserting node
  * @n: data
  * Return: returns adress of new node
  */

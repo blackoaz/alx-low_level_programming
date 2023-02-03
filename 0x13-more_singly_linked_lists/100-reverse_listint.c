@@ -6,16 +6,19 @@
  */
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *currentnode, nextnode;
+	listint_t *prev = NULL;
 
-	currentnode = nextnode = *head;
+	listint_t *current = *head;
 
-	while (nexnode != NULL)
+	while (current)
 	{
-		nextnode = nextnode->next;
-		currentnode->next = *head;
-		*head = currentnode;
-		currentnode = nextnode;
+		listint_t *next = current->next;
+
+		current->next = prev;
+
+		prev = current;
+		current = next;
 	}
-	return (head);
+	*head = prev;
+	return (*head);
 }

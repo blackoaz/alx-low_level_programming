@@ -1,8 +1,12 @@
 #include "main.h"
+#include <unistd.h>
+#include <limits.h>
 /**
- * print_binary - function that prints binary representation of a number
- * @n: interger
- * Return:0
+ * print_binary - print an unsigned int in binary
+ *
+ * @n:
+ *
+ * Return: void
  */
 void print_binary(unsigned long int n)
 {

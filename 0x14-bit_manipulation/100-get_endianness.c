@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdint.h>
 /**
  * get_endianness - return the endianness of the machine
  *
@@ -6,7 +7,8 @@
  */
 int get_endianness(void)
 {
-	int n = 1;
+	int16_t x = 1;
 
-	return (*((char *) &n) + '0');
+	return (*((int8_t *) &x));
 }
+

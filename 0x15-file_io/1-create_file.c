@@ -13,7 +13,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int file;
-	int o_rw = 0, length;
+	int o_rw = 0, length = 0;
 	char *ptr;
 
 	if (filename == NULL)

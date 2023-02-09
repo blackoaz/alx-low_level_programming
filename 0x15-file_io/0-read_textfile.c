@@ -4,49 +4,44 @@
 #include <stdlib.h>
 
 /**
- * read_textfile - function for reading text file and printing
- * @filename: name of file
- * @letters: number of letters to be read and printed
- * Return: returns leters to be read and printed
+ * read_textfile - prints text from a file
+ *
+ * @filename: name of the file
+ * @letters: number of characters to read
+ *
+ * Return: actual number of letters read, 0 if end of file
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	int o_rd, o_rw;
-	size_t read_bytes, written_bytes;
-	char *buffer;
+	int file;
+	int length, wrotechars;
+	char *buf;
 
 	if (filename == NULL || letters == 0)
 		return (0);
-	buffer = malloc(sizeof(char) * (letters));
-	if (buffer == NULL)
+	buf = malloc(sizeof(char) * (letters));
+	if (buf == NULL)
 		return (0);
 
-	fd = open(filename, O_RDONLY);
-
-	if (fd == -1)
+	file = open(filename, O_RDONLY);
+	if (file == -1)
 	{
-		free(buffer);
+		free(buf);
+		return (0);
+	}
+	length = read(file, buf, letters);
+	if (length == -1)
+	{
+		free(buf);
+		close(file);
 		return (0);
 	}
 
-	o_rd = read(filename, buffer, letters);
+	wrotechars = write(STDOUT_FILENO, buf, length);
 
-	if (o_rd == -1)
-	{
-		free(buffer);
-		close(fd);
+	free(buf);
+	close(file);
+	if (wrotechars != length)
 		return (0);
-	}
-
-	o_rw = write(STDOUT_FILENO, buffer, o_rd);
-
-	if (o_rw != o_rd)
-		return (0);
-
-	free(buffer);
-	close(fd);
-	return (o_rd);
-
-
+	return (length);
 }

@@ -5,8 +5,8 @@
  * Return: returns a pointer to a nwelly created hash table
  */
 
-hash_table_t *hash_table_create(unsigned long int size){
-	
+hash_table_t *hash_table_create(unsigned long int size)
+{
 	unsigned long int i;
 	hash_table_t *table;
 	/*allocating memory for the table*/
@@ -18,7 +18,8 @@ hash_table_t *hash_table_create(unsigned long int size){
 	/*allocating memeory for the array based on the size*/
 	table->array = malloc(sizeof(hash_table_t *) * size);
 
-	for (i = 0; i < size; i++){
+	for (i = 0; i < size; i++)
+	{
 		table->array[i] = NULL;
 	}
 	return (table);

@@ -43,9 +43,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 }
 
 /**
- * create_node - create a new node
- * @key: is the key. key can not be an empty string
- * @value: value associated with the key.
+ * create_node - creates new node
+ * @key: is the key and the key can not be an empty string
+ * @value: value of the given key.
  * Return: 1 on success, 0 on failure
  */
 hash_node_t *create_node(const char *key, const char *value)

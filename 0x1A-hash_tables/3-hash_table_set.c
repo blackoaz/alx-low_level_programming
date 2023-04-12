@@ -1,10 +1,11 @@
 #include "hash_tables.h"
+
 /**
- * hash_table_set - function that adds an element to the hash table
- * @ht: hash table to add and the key and value pair
- * @key: key to add
- * @value: value to add
- * Return: 1 on success, 0 on failure
+ * hash_table_set - function that adds elements to a hash table
+ * @ht: the hash table
+ * @key: key to be added
+ * @value: the value for the given key
+ * Return: 1 if success else 0
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -19,7 +20,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 
 	index = key_index((const unsigned char *)key, ht->size);
-	node = ht->array[idx];
+	node = ht->array[index];
 
 	if (node == NULL)
 	{
@@ -43,9 +44,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 }
 
 /**
- * create_node - creates new node
- * @key: is the key and the key can not be an empty string
- * @value: value of the given key.
+ * create_node - creates a new node
+ * @key: key for the node and can not be an empty string
+ * @value: value for the key.
  * Return: 1 on success, 0 on failure
  */
 hash_node_t *create_node(const char *key, const char *value)

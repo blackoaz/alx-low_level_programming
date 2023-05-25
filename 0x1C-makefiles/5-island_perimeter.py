@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-#function for calculating the perimeter of an irregular shape(island)
+"""
+function for calculating the perimeter of an irregular shape(island)
+"""
+
 
 def island_perimeter(grid):
     """
@@ -33,4 +36,3 @@ def island_perimeter(grid):
                 if j > 0 and grid[i][j - 1] == 1:
                     perimeter -= 2
     return perimeter
-
